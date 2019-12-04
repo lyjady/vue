@@ -13,3 +13,6 @@ spring:
 mybatis:
   type-aliases-package: com.example.vue.entries
   mapper-locations: classpath:/com/example/vue/mapper/*.xml
+logging:
+  level:
+    com.example.vue.mapper: debug

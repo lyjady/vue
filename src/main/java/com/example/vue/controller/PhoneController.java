@@ -3,6 +3,7 @@ package com.example.vue.controller;
 import com.example.vue.entries.Phone;
 import com.example.vue.service.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,8 +27,8 @@ public class PhoneController {
         return phoneService.getAll();
     }
 
-    @RequestMapping("/add")
-    public int add(@RequestBody(required = false) Phone phone) {
+    @PostMapping("/add")
+    public int add(@RequestBody Phone phone) {
         phone.setTime(new Date());
         return phoneService.insertSelective(phone);
     }
