@@ -11,4 +11,6 @@ import java.util.List;
 public interface NewsCommentService {
 
     List<NewsComment> getNewsList(int pageNumber);
+
+    int insertNewsComment(NewsComment newsComment);
 }

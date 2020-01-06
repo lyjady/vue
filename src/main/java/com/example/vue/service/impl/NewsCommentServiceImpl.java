@@ -22,4 +22,9 @@ public class NewsCommentServiceImpl implements NewsCommentService {
     public List<NewsComment> getNewsList(int pageNumber) {
         return newsCommentMapper.getNewsListByPage(pageNumber);
     }
+
+    @Override
+    public int insertNewsComment(NewsComment newsComment) {
+        return newsCommentMapper.insertSelective(newsComment);
+    }
 }

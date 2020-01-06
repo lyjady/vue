@@ -85,6 +85,6 @@
         where id = #{id,jdbcType=INTEGER}
     </update>
     <select id="getNewsListByPage" resultMap="BaseResultMap">
-        select * from demo.vue_news_comment limit #{pageNumber}, 10;
+        select * from demo.vue_news_comment order by add_time desc limit #{pageNumber}, 10;
     </select>
 </mapper>
